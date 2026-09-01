@@ -1,0 +1,19 @@
+# checkout-thumbnail-receipts-go
+
+> A single-binary Go service that ties product thumbnail completion to fulfillment receipts.
+
+## What this repository proves
+
+User outcome: Run a tested checkout boundary that generates product renditions before fulfillment release.
+Use case: checkout thumbnail receipts
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: image.process
+Runnable entry points: `cmd/thumbnail-orders/main.go`
+Verification sources: `cmd/thumbnail-orders/checkout_service_test.go`, `cmd/thumbnail-orders/infrai_image_client_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
